@@ -1,7 +1,7 @@
-pytest
-requests
-selenium
-jsonschema
+pytest~=7.2.2
+requests~=2.28.2
+selenium~=4.8.2
+jsonschema~=4.17.3
 pythonping
-ping3
-
+ping3~=4.0.4
+locust~=2.15.1
