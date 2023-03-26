@@ -1,30 +1,35 @@
+import json
+import requests
+s = requests.Session()
 
 
 # http://localhost:8089
 # https://pypi.org/project/locust/
-#
-from locust import HttpUser, SequentialTaskSet, task, between
+# https://www.youtube.com/watch?v=_Z62E46bDmY
+from locust import HttpUser, SequentialTaskSet, task, between, constant,user
 
 
 class User(HttpUser):
-    @task
+    @task (user)
     class SequenceOfTasks(SequentialTaskSet):
-        wait_time = between(1, 5)
+        # wait_time = between(1, 5)
+        wait_time = constant(1)
 
-        @task
+        @task(user)
         def mainPage(self):
             # self.client.get("/")
-            self.client.get("http://jsonplaceholder.typicode.com/todos")
+            with   self.client.get("http://jsonplaceholder.typicode.com/todos"catch_response=True) as response:
+                assert response == json, 'not answer to todos'
 
-        @task
+        @task(user)
         def login(self):
             # self.client.options("https://api.demoblaze.com/login")
             # self.client.post("https://api.demoblaze.com/login", json={"username": "aaaa", "password": "YWFhYQ=="})
             # self.client.options("https://api.demoblaze.com/check")
-            self.client.get("http://jsonplaceholder.typicode.com/todos/1")
+            self.client.get("http://jsonplaceholder.typicode.com/todos/1") as request:
             # self.client.post("https://petstore.swagger.io/v2/swagger.json", json={"token": "YWFhYTE2MzA5NDU="})
-
-        @task
+            assert request == json, 'not answer to todos/1'
+        @task(user)
         def clickProduct(self):
             self.client.get("http://jsonplaceholder.typicode.com/todos/1")
             # self.client.options("https://api.demoblaze.com/check")
@@ -52,6 +57,6 @@ class User(HttpUser):
 
         @task
         def viewCart(self):
-            self.client.get("http://jsonplaceholder.typicode.com/todos")
+            self.client.get("http://jsonplaceholder.typicode.com/todos/5")
 
 

@@ -5,3 +5,5 @@ jsonschema~=4.17.3
 pythonping
 ping3~=4.0.4
 locust~=2.15.1
+
+assertion~=1.0.0
