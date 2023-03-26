@@ -18,7 +18,7 @@ def browser():
     browser.set_window_size(1416, 1026)
     # browser.maximize_window()
     url = 'https://www.lambdatest.com/'
-    print(browser.get_window_size())
+    # print(browser.get_window_size())
     browser.get(url=url)
     browser.set_page_load_timeout(10) # sets timeout to 10 sec
     yield browser
