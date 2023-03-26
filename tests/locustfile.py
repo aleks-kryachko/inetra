@@ -17,9 +17,9 @@ class User(HttpUser):
 
         @task(user)
         def mainPage(self):
-            # self.client.get("/")
-            with   self.client.get("http://jsonplaceholder.typicode.com/todos"catch_response=True) as response:
-                assert response == json, 'not answer to todos'
+            self.client.get("/")
+            # with   self.client.get("http://jsonplaceholder.typicode.com/todos"catch_response=True) as response:
+            #     assert response == json, 'not answer to todos'
 
         @task(user)
         def login(self):
