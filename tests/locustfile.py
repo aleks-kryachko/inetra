@@ -23,6 +23,7 @@ class User(HttpUser):
 
         @task(user)
         def login(self):
+            print('ttests')
             # self.client.options("https://api.demoblaze.com/login")
             # self.client.post("https://api.demoblaze.com/login", json={"username": "aaaa", "password": "YWFhYQ=="})
             # self.client.options("https://api.demoblaze.com/check")
