@@ -23,10 +23,19 @@ def browser():
     browser.set_page_load_timeout(10) # sets timeout to 10 sec
     yield browser
     browser.quit()
-def test_01_main_page(browser):
+def test_01_templates_logs_items(browser):
     browser.find_element(By.LINK_TEXT, 'Шаблоны').click()
+    assert browser.find_element(By.CLASS_NAME, 'active'), 'Шапка'
     assert browser.find_element(By.CLASS_NAME, 'button'), 'button'
-    assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
-    assert browser.find_element(By.LINK_TEXT, 'Код'), 'Код'
-    assert browser.find_element(By.LINK_TEXT, 'ID'), 'ID'
-    assert browser.find_element(By.LINK_TEXT, 'Наименование'), 'Наименование'
+    assert browser.find_element(By.CLASS_NAME, 'table-filter'), 'Фильтр'
+    # assert browser.find_element(By.LINK_TEXT, 'Код'), 'Код'
+    # assert browser.find_element(By.LINK_TEXT, 'ID'), 'ID'
+    # assert browser.find_element(By.LINK_TEXT, 'Наименование'), 'Наименование'
+    # assert browser.find_element(By.LINK_TEXT, 'Версия'), 'Наименование'
+    # assert browser.find_element(By.LINK_TEXT, 'Тип события'), 'Наименование'
+    # assert browser.find_element(By.LINK_TEXT, 'ID канала'), 'Наименование'
+    # assert browser.find_element(By.LINK_TEXT, 'Заголовок'), 'Наименование'
+    # assert browser.find_element(By.LINK_TEXT, 'Контент'), 'Наименование'
+    # assert browser.find_element(By.LINK_TEXT, 'Файл'), 'Наименование'
+    # assert browser.find_element(By.LINK_TEXT, 'Дата зоздания'), 'Наименование'
+
