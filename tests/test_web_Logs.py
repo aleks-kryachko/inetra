@@ -10,22 +10,6 @@ from conftest import host_web
 from conftest import browser
 
 
-url = host_web
-
-# @pytest.fixture
-# def browser():
-#     browser = webdriver.Chrome(executable_path=".chromedriver.exe")
-#     # browser = webdriver.Chrome()
-#     browser.set_window_size(1416, 1026)
-#     # browser.maximize_window()
-#     url = host_web
-#     # print(browser.get_window_size())
-#     browser.get(url=url)
-#     browser.set_page_load_timeout(10) # sets timeout to 10 sec
-#     yield browser
-#     browser.quit()
-
-
 def test_01_status_code():
     url = host_web
     responce = requests.get(url=url)
