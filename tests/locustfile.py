@@ -26,9 +26,9 @@ class User(HttpUser):
             # self.client.options("https://api.demoblaze.com/login")
             # self.client.post("https://api.demoblaze.com/login", json={"username": "aaaa", "password": "YWFhYQ=="})
             # self.client.options("https://api.demoblaze.com/check")
-            self.client.get("http://jsonplaceholder.typicode.com/todos/1") as request:
+            # self.client.get("http://jsonplaceholder.typicode.com/todos/1") as request:
             # self.client.post("https://petstore.swagger.io/v2/swagger.json", json={"token": "YWFhYTE2MzA5NDU="})
-            assert request == json, 'not answer to todos/1'
+            # assert request == json, 'not answer to todos/1'
         @task(user)
         def clickProduct(self):
             self.client.get("http://jsonplaceholder.typicode.com/todos/1")
