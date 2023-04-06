@@ -31,4 +31,8 @@ def test_02_created_shablon(browser):
     assert browser.find_element(By.CLASS_NAME, 'main'), 'Добавить шаблон'
     assert browser.find_element(By.CLASS_NAME, 'button-back'), 'кнопка Вернуться'
     assert browser.find_element(By.ID, 'code'), 'Код'
-
+    assert browser.find_element(By.ID, 'name'), 'Наименование'
+    assert browser.find_element(By.ID, 'version'), 'Версия'
+    assert browser.find_element(By.ID, 'channel_type'), 'Тип канала'
+    assert browser.find_element(By.ID, 'title'), 'Тема оповещения'
+    assert browser.find_element(By.CLASS_NAME, 'form-group'), 'Структура уведомления'
