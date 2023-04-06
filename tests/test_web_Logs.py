@@ -34,7 +34,6 @@ def test_02_main_page(browser):
     # browser.find_element(By.CLASS_NAME, 'header__nav-list').click()
     assert browser.find_element(By.LINK_TEXT, 'Журнал событий'), 'элемент  Журнал событий'
     assert browser.find_element(By.LINK_TEXT, 'Журнал оповещений'), 'элемент  Журнал оповещений'
-
     browser.find_element(By.LINK_TEXT, 'Журналы').click()
     assert browser.find_element(By.LINK_TEXT, 'Дата и время'), 'Дата и время'
     assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
@@ -57,8 +56,6 @@ def test_02_main_page(browser):
     assert browser.find_element(By.LINK_TEXT, 'ID события/задания'), 'элемент ID события/задания'
     assert browser.find_element(By.LINK_TEXT, 'Статус'), 'элемент Статус'
     assert browser.find_element(By.LINK_TEXT, 'Заголовок'), 'элемент Заголовок'
-
-
     browser.find_element(By.LINK_TEXT, 'Журнал оповещений').click()
     assert browser.find_element(By.LINK_TEXT, 'Дата и время'), 'Дата и время'
     assert browser.find_element(By.LINK_TEXT, 'Получатель'), 'Получатель'
