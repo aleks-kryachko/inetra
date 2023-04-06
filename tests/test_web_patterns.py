@@ -15,7 +15,7 @@ def test_01_templates_logs_items(browser):
     assert browser.find_element(By.CLASS_NAME, 'button'), 'button'
     assert browser.find_element(By.CLASS_NAME, 'table-filter'), 'Фильтр'
     assert browser.find_element(By.LINK_TEXT, 'Код'), 'Код'
-    # assert browser.find_element(By.LINK_TEXT, 'ID'), 'ID'
+    assert browser.find_element(By.LINK_TEXT, 'ID'), 'ID'
     assert browser.find_element(By.LINK_TEXT, 'Наименование'), 'поле Наименование'
     assert browser.find_element(By.LINK_TEXT, 'Версия'), 'поле Версия'
     assert browser.find_element(By.LINK_TEXT, 'Тип события'), 'поле Тип события'
@@ -24,6 +24,4 @@ def test_01_templates_logs_items(browser):
     assert browser.find_element(By.LINK_TEXT, 'Контент'), 'поле Контент'
     assert browser.find_element(By.LINK_TEXT, 'Файл'), 'поле Файл'
     assert browser.find_element(By.LINK_TEXT, 'Дата создания'), 'поле Дата создания'
-
-
     browser.find_element(By.CLASS_NAME, 'button').click()
