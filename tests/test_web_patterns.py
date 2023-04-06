@@ -24,4 +24,11 @@ def test_01_templates_logs_items(browser):
     assert browser.find_element(By.LINK_TEXT, 'Структура уведомления'), 'поле Структура уведомления'
     assert browser.find_element(By.LINK_TEXT, 'Файл'), 'поле Файл'
     assert browser.find_element(By.LINK_TEXT, 'Дата создания'), 'поле Дата создания'
+
+def test_02_created_shablon(browser):
+    browser.find_element(By.LINK_TEXT, 'Шаблоны').click()
     browser.find_element(By.CLASS_NAME, 'button').click()
+    assert browser.find_element(By.CLASS_NAME, 'main'), 'Добавить шаблон'
+    assert browser.find_element(By.CLASS_NAME, 'button-back'), 'кнопка Вернуться'
+    assert browser.find_element(By.ID, 'code'), 'Код'
+
