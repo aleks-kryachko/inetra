@@ -36,3 +36,4 @@ def test_01_main_page(browser):
     assert browser.find_element(By.LINK_TEXT, 'Таймаут'), 'Элемент Таймаут'
     assert browser.find_element(By.LINK_TEXT, 'Email SMTP'), 'Элемент Email SMTP'
     browser.find_element(By.CLASS_NAME, 'button').click()
+

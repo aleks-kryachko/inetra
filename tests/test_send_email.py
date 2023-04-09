@@ -6,23 +6,25 @@ from jsonschema import Draft7Validator
 from jsonschema import validate
 from conftest import host_web
 
-url = f'host_sent+"/api/notification/sms"'
+url = host_web+'/api/notification/sms'
 
 
 def test_01_status_cod():
-    r = requests.get(url=host_web+url)
+    # url = host_web+'/api/notification/sms'
+    r = requests.get(url=url)
     assert (r.status_code == 200), 'status is not 200'
-print(requests.Response)
+    print(requests.Response)
 
 def test_02_check_post_json(requests):
     json = {
-        'phones': [
-            {
-                'phone': '77777777777',
-            }
-        ],
-        'text': 'text text',
-    }
+    'tokens': [
+        {
+            'token': 'tr6y5rn7658mi7rouyg9f6dt76j6u',
+        }
+    ],
+    'title': 'push title',
+    'text': 'push text',
+}
 
 
 response = requests.post(url=url, json=json)

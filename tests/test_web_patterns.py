@@ -10,7 +10,7 @@ http://195.189.239.54/templates
 :maintainer: Aleksandr Kryachko
 :email: aleksan.kryachko@gmail.com
 """
-
+import requests
 import pytest
 import time
 from selenium.webdriver.common.keys import Keys

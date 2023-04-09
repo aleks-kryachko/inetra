@@ -34,3 +34,9 @@ def test_01_templates_logs_items(browser):
     browser.find_element(By.CLASS_NAME, 'button').click()
     assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
     assert browser.find_element(By.CLASS_NAME, 'button-back'), 'вернуться'
+    assert browser.find_element(By.CLASS_NAME, 'main'), 'поля ввода'
+    assert browser.find_element(By.NAME, 'external_systems[]'), 'внешние системы'
+    assert browser.find_element(By.NAME, 'recipients[]'), 'Получатели'
+    assert browser.find_element(By.ID, 'name'), 'Наименование'
+    assert browser.find_element(By.NAME, 'priority'), 'Приоритет'
+    assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'кнопки'
