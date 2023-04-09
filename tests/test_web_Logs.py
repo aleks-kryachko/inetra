@@ -30,32 +30,77 @@ def test_01_status_code():
     assert responce.status_code == 200, 'status not 200'
 def test_02_main_page(browser):
     assert browser.find_element(By.CLASS_NAME, 'header__title'), 'элемент МУП'
-    assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка '
-    assert browser.find_element(By.LINK_TEXT, 'Журналы'), 'элемент поле Журналы'
-    assert browser.find_element(By.LINK_TEXT, 'Каналы'), 'элемент поле Каналы'
 
-    assert browser.find_element(By.LINK_TEXT, 'Получатели'), 'элемент Получатели'
-    assert browser.find_element(By.LINK_TEXT, 'Каналы'), 'элемент Каналы'
-    assert browser.find_element(By.LINK_TEXT, 'Шаблоны'), 'элемент Шаблоны'
-    assert browser.find_element(By.LINK_TEXT, 'Внешние системы'), 'элемент Внешние системы'
-    assert browser.find_element(By.LINK_TEXT, 'События'), 'элемент События'
+    def test_03():
+        assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка '
 
-    assert browser.find_element(By.LINK_TEXT, 'Журналы'), 'элемент поле Журналы'
-    assert browser.find_element(By.LINK_TEXT, 'Каналы'), 'элемент поле Каналы'
-    assert browser.find_element(By.LINK_TEXT, 'Получатели'), 'элемент поле Получатели'
-    assert browser.find_element(By.LINK_TEXT, 'Шаблоны'),'элемент поле Шаблоны'
-    assert browser.find_element(By.LINK_TEXT, 'Внешние системы'), 'элемент поле Внешние системы'
-    assert browser.find_element(By.LINK_TEXT, 'Журнал событий'), 'элемент  Журнал событий'
-    assert browser.find_element(By.LINK_TEXT, 'Журнал оповещений'), 'элемент  Журнал оповещений'
-    browser.find_element(By.LINK_TEXT, 'Журнал событий').click()
-    assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
-    assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
-    assert browser.find_element(By.LINK_TEXT, 'Журнал оповещений'), 'Журнал оповещений'
-    assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
+    def test_04():
+        assert browser.find_element(By.LINK_TEXT, 'Журналы'), 'элемент поле Журналы'
 
-    browser.find_element(By.LINK_TEXT, 'Журнал оповещений').click()
-    assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
-    assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
-    assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
-    assert browser.find_element(By.LINK_TEXT, 'Журнал событий'), 'элемент  Журнал событий'
-    assert browser.find_element(By.LINK_TEXT, 'Журнал оповещений'), 'элемент  Журнал оповещений'
+    def test_05():
+        assert browser.find_element(By.LINK_TEXT, 'Каналы'), 'элемент поле Каналы'
+
+    def test_06():
+        assert browser.find_element(By.LINK_TEXT, 'Получатели'), 'элемент Получатели'
+
+    def test_07():
+        assert browser.find_element(By.LINK_TEXT, 'Каналы'), 'элемент Каналы'
+
+    def test_08():
+        assert browser.find_element(By.LINK_TEXT, 'Шаблоны'), 'элемент Шаблоны'
+
+    def test_09():
+        assert browser.find_element(By.LINK_TEXT, 'Внешние системы'), 'элемент Внешние системы'
+
+    def test_10():
+        assert browser.find_element(By.LINK_TEXT, 'События'), 'элемент События'
+
+    def test_11():
+        assert browser.find_element(By.LINK_TEXT, 'Журналы'), 'элемент поле Журналы'
+
+    def test_12():
+        assert browser.find_element(By.LINK_TEXT, 'Каналы'), 'элемент поле Каналы'
+
+    def test_13():
+        assert browser.find_element(By.LINK_TEXT, 'Получатели'), 'элемент поле Получатели'
+
+    def test_14():
+        assert browser.find_element(By.LINK_TEXT, 'Шаблоны'),'элемент поле Шаблоны'
+
+    def test_15():
+        assert browser.find_element(By.LINK_TEXT, 'Внешние системы'), 'элемент поле Внешние системы'
+
+    def test_16():
+        assert browser.find_element(By.LINK_TEXT, 'Журнал событий'), 'элемент  Журнал событий'
+
+    def test_17():
+        assert browser.find_element(By.LINK_TEXT, 'Журнал оповещений'), 'элемент  Журнал оповещений'
+
+    def test_18():
+        browser.find_element(By.LINK_TEXT, 'Журнал событий').click()
+        assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
+
+    def test_19():
+        assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
+
+    def test_20():
+        assert browser.find_element(By.LINK_TEXT, 'Журнал оповещений'), 'Журнал оповещений'
+
+    def test_21():
+        assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
+
+    def test_22():
+        browser.find_element(By.LINK_TEXT, 'Журнал оповещений').click()
+        assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
+
+    def test_23():
+        assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
+
+    def test_24():
+        assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
+
+    def test_25():
+        assert browser.find_element(By.LINK_TEXT, 'Журнал событий'), 'элемент  Журнал событий'
+
+    def test_26():
+        assert browser.find_element(By.LINK_TEXT, 'Журнал оповещений'), 'элемент  Журнал оповещений'
