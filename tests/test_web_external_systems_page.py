@@ -31,3 +31,4 @@ def test_01_templates_logs_items(browser):
     assert browser.find_element(By.ID, 'is_mailing'), 'Разрешен прием заданий'
     assert browser.find_element(By.ID, 'events'), 'Событие'
     assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'Сохранить'
+    assert browser.find_element(By.CLASS_NAME, 'form-input-clear'), 'очистить строку'
