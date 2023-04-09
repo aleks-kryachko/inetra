@@ -9,6 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from conftest import host_web
 from conftest import browser
 
+# http://195.189.239.54/logs/events
+# вкладка журналы
 
 def test_01_status_code():
     url = host_web

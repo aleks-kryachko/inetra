@@ -9,6 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from conftest import host_web
 from conftest import browser
 
+# http://195.189.239.54/channels
+# вкладка каналы
 
 def test_01_main_page(browser):
     browser.find_element(By.LINK_TEXT, 'Каналы').click()
