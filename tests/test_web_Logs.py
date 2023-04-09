@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+http://195.189.239.54/templates
+вкладка журналы
+Проверка наличия всех основных элементов на странице
+:author: Aleksandr Kryachko
+:copyright: Copyright 2023, Inetra Selenium Tests"
+:license: MIT
+:version: 1.0.0
+:maintainer: Aleksandr Kryachko
+:email: aleksan.kryachko@gmail.com
+"""
 import pytest
 import requests
 import time

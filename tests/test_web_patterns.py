@@ -1,3 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+http://195.189.239.54/templates
+вкладка шаблоны
+Проверка наличия всех основных элементов на странице
+:author: Aleksandr Kryachko
+:copyright: Copyright 2023, Inetra Selenium Tests"
+:license: MIT
+:version: 1.0.0
+:maintainer: Aleksandr Kryachko
+:email: aleksan.kryachko@gmail.com
+"""
+
 import pytest
 import time
 from selenium.webdriver.common.keys import Keys
@@ -8,8 +21,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from conftest import host_web
 from conftest import browser
 
-# http://195.189.239.54/templates
-# вкладка шаблоны
+
 
 def test_01_templates_logs_items(browser):
     browser.find_element(By.LINK_TEXT, 'Шаблоны').click()
