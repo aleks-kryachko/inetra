@@ -39,6 +39,8 @@ def test_01_main_page(browser):
     assert browser.find_element(By.CLASS_NAME, 'button-back'), 'Элемент Вернуться'
     assert browser.find_element(By.CLASS_NAME, 'main'), 'Элемент Таблица'
     assert browser.find_element(By.ID, 'channel_type'), 'Элемент Наименование'
-    assert browser.find_element(By.CLASS_NAME, 'ID'), 'Элемент ID'
-    assert browser.find_element(By.CLASS_NAME, 'ID'), 'Элемент ID'
+    assert browser.find_element(By.ID, 'send_count'), 'Элемент Количество попыток'
+    assert browser.find_element(By.ID, 'is_default'), 'По умолчанию'
+    assert browser.find_element(By.CLASS_NAME, 'form-input-clear'), 'Элемент Очистить строку'
+    assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'Элемент Кнопки'
 
