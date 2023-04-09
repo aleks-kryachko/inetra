@@ -3,7 +3,7 @@
 http://195.189.239.54
 ping адреса
 :author: Aleksandr Kryachko
-:copyright: Copyright 2023, Inetra Selenium Tests"
+:copyright: Copyright 2023, Inetra Selenium Tests
 :license: MIT
 :version: 1.0.0
 :maintainer: Aleksandr Kryachko

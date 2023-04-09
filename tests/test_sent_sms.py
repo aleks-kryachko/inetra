@@ -3,7 +3,7 @@
 http://195.189.239.54/api/notification/email
 отправка СМС
 :author: Aleksandr Kryachko
-:copyright: Copyright 2023, Inetra Selenium Tests"
+:copyright: Copyright 2023, Inetra Selenium Tests
 :license: MIT
 :version: 1.0.0
 :maintainer: Aleksandr Kryachko
@@ -15,8 +15,9 @@ import jsonschema
 from jsonschema import Draft7Validator
 from jsonschema import validate
 from conftest import host_web
+from conftest import host_web
 
-url = f'host_sent+"/api/notification/email"'
+url = host_web+'/api/notification/telegram'
 
 
 def test_01_status_cod():
