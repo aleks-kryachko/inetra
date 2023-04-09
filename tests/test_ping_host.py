@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 http://195.189.239.54
-ping страницы
+ping адреса
 :author: Aleksandr Kryachko
 :copyright: Copyright 2023, Inetra Selenium Tests"
 :license: MIT
@@ -22,5 +22,6 @@ def test_01_status_cod():
 def test_02_ping():
     otvet = ping(host_web)
     print(otvet)
-    assert otvet != True, 'сервер Offline'
+    assert otvet != True, 'Сервер Offline'
+
 

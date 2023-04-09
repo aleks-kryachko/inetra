@@ -1,5 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+http://195.189.239.54/api/notification/sms
+отправка EMail
+:author: Aleksandr Kryachko
+:copyright: Copyright 2023, Inetra Selenium Tests"
+:license: MIT
+:version: 1.0.0
+:maintainer: Aleksandr Kryachko
+:email: aleksan.kryachko@gmail.com
+"""
+
 import requests
-from conftest import host_sent
 import json
 import jsonschema
 from jsonschema import Draft7Validator
