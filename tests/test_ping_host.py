@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+http://195.189.239.54
+ping страницы
+:author: Aleksandr Kryachko
+:copyright: Copyright 2023, Inetra Selenium Tests"
+:license: MIT
+:version: 1.0.0
+:maintainer: Aleksandr Kryachko
+:email: aleksan.kryachko@gmail.com
+"""
 from ping3 import ping
 import requests
 import pytest
