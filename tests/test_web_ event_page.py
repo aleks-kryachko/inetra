@@ -40,3 +40,8 @@ def test_01_templates_logs_items(browser):
     assert browser.find_element(By.ID, 'name'), 'Наименование'
     assert browser.find_element(By.NAME, 'priority'), 'Приоритет'
     assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'кнопки'
+    assert browser.find_element(By.ID, 'type_code'), 'Тип события'
+    assert browser.find_element(By.ID, 'sending_count'), 'количество отправок'
+    assert browser.find_element(By.ID, 'is_ready'), 'Готов к использованию'
+    assert browser.find_element(By.ID, 'is_public'), 'Общесистемный'
+    assert browser.find_element(By.CLASS_NAME, 'form-input-clear'), 'Очистить строку'

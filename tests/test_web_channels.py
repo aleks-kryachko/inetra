@@ -26,9 +26,9 @@ from conftest import browser
 def test_01_main_page(browser):
     browser.find_element(By.LINK_TEXT, 'Каналы').click()
     assert browser.find_element(By.CLASS_NAME, 'button'), 'Элемент button'
-    assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Элемент Фильтр'
-    assert browser.find_element(By.LINK_TEXT, 'ID'), 'Элемент ID'
-    assert browser.find_element(By.LINK_TEXT, 'Наименование'), 'Элемент Наименование'
+    assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
+    assert browser.find_element(By.CLASS_NAME, 'ID'), 'Элемент ID'
+    assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
     assert browser.find_element(By.LINK_TEXT, 'Тип канала'), 'Элемент Тип канала'
     assert browser.find_element(By.LINK_TEXT, 'Отправитель'), 'Элемент Отправитель'
     assert browser.find_element(By.LINK_TEXT, 'По умолчанию'), 'Элемент По умолчанию'
@@ -36,4 +36,9 @@ def test_01_main_page(browser):
     assert browser.find_element(By.LINK_TEXT, 'Таймаут'), 'Элемент Таймаут'
     assert browser.find_element(By.LINK_TEXT, 'Email SMTP'), 'Элемент Email SMTP'
     browser.find_element(By.CLASS_NAME, 'button').click()
+    assert browser.find_element(By.CLASS_NAME, 'button-back'), 'Элемент Вернуться'
+    assert browser.find_element(By.CLASS_NAME, 'main'), 'Элемент Таблица'
+    assert browser.find_element(By.ID, 'channel_type'), 'Элемент Наименование'
+    assert browser.find_element(By.CLASS_NAME, 'ID'), 'Элемент ID'
+    assert browser.find_element(By.CLASS_NAME, 'ID'), 'Элемент ID'
 
