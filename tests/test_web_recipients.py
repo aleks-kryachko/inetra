@@ -23,12 +23,34 @@ from conftest import browser
 
 def test_01_recipients_list(browser):
     browser.find_element(By.LINK_TEXT, 'Получатели').click()
-    assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
-    assert browser.find_element(By.CLASS_NAME, 'main'), 'таблица'
-    assert browser.find_element(By.CLASS_NAME, 'active'), 'Получатели'
-    assert browser.find_element(By.LINK_TEXT, 'Контакты получателей'), 'Контакты Получателей'
-    assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
-    assert browser.find_element(By.CLASS_NAME, 'buttons-top'), 'кнопка Добавить'
-    browser.find_element(By.CLASS_NAME, 'button'), 'кнопка Добавить'
-    browser.find_element(By.CLASS_NAME, 'button').click()
-
+    def test_02():
+        assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
+    def test_03():
+        assert browser.find_element(By.CLASS_NAME, 'main'), 'таблица'
+    def test_04():
+        assert browser.find_element(By.CLASS_NAME, 'active'), 'Получатели'
+    def test_05():
+        assert browser.find_element(By.LINK_TEXT, 'Контакты получателей'), 'Контакты Получателей'
+    def test_06():
+        assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
+    def test_07():
+        assert browser.find_element(By.CLASS_NAME, 'buttons-top'), 'кнопка Добавить'
+    def test_08():
+        assert browser.find_element(By.CLASS_NAME, 'button'), 'кнопка Добавить'
+    def test_09_add_recipient():
+        browser.find_element(By.CLASS_NAME, 'button').click()
+        assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
+        def test_10():
+            assert browser.find_element(By.CLASS_NAME, 'button-back'), 'Вернуться'
+        def test_11():
+            assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
+        def test_12():
+            assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'Кнопки'
+        def test_13():
+            assert browser.find_element(By.CLASS_NAME, 'form-input-clear'), 'очистить строку'
+        def test_14():
+            assert browser.find_element(By.CLASS_NAME, 'recipient_id'), 'ID получателя'
+        def test_15():
+            assert browser.find_element(By.CLASS_NAME, 'contact_info'), 'контакт получателя'
+        def test_16():
+            assert browser.find_element(By.CLASS_NAME, 'is_active'), 'признак активности'
