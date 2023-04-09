@@ -25,9 +25,12 @@ from conftest import browser
 
 def test_01_templates_logs_items(browser):
     browser.find_element(By.LINK_TEXT, 'Шаблоны').click()
+    assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
+    assert browser.find_element(By.CLASS_NAME, 'main'), 'таблица'
+    assert browser.find_element(By.CLASS_NAME, 'active'), 'Шапка'
     assert browser.find_element(By.CLASS_NAME, 'active'), 'Шапка'
     assert browser.find_element(By.CLASS_NAME, 'button'), 'button'
-    assert browser.find_element(By.CLASS_NAME, 'table-filter'), 'Фильтр'
+    assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
     assert browser.find_element(By.LINK_TEXT, 'Код'), 'Код'
     assert browser.find_element(By.LINK_TEXT, 'ID'), 'ID'
     assert browser.find_element(By.LINK_TEXT, 'Наименование'), 'поле Наименование'
@@ -39,11 +42,11 @@ def test_01_templates_logs_items(browser):
     assert browser.find_element(By.LINK_TEXT, 'Файл'), 'поле Файл'
     assert browser.find_element(By.LINK_TEXT, 'Дата создания'), 'поле Дата создания'
 
-def test_02_created_shablon(browser):
     browser.find_element(By.LINK_TEXT, 'Шаблоны').click()
     browser.find_element(By.CLASS_NAME, 'button').click()
-    assert browser.find_element(By.CLASS_NAME, 'main'), 'Добавить шаблон'
+    assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
     assert browser.find_element(By.CLASS_NAME, 'button-back'), 'кнопка Вернуться'
+    assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'кнопки'
     assert browser.find_element(By.ID, 'code'), 'Код'
     assert browser.find_element(By.ID, 'name'), 'Наименование'
     assert browser.find_element(By.ID, 'version'), 'Версия'
