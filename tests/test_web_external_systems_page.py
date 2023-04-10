@@ -21,7 +21,7 @@ from conftest import host_web
 from conftest import browser
 
 
-
+@pytest.mark.smoke
 def test_01_templates_logs_items(browser):
     browser.find_element(By.LINK_TEXT, 'Внешние системы').click()
 

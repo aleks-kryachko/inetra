@@ -20,7 +20,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from conftest import host_web
 from conftest import browser
-
+@pytest.mark.smoke
 def test_01_recipients_list(browser):
     browser.find_element(By.LINK_TEXT, 'Получатели').click()
     def test_02():

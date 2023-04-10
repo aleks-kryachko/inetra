@@ -20,6 +20,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from conftest import host_web
 from conftest import browser
 
+
+@pytest.mark.smoke
 def test_01_templates_logs_items(browser):
     browser.find_element(By.LINK_TEXT, 'События').click()
 

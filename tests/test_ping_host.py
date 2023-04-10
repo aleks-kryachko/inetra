@@ -14,7 +14,7 @@ import requests
 import pytest
 import time
 from conftest import host_web
-
+@pytest.mark.smoke
 def test_01_status_cod():
     r = requests.get(url=host_web)
     # print(url, r.status_code)

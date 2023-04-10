@@ -16,10 +16,11 @@ from jsonschema import Draft7Validator
 from jsonschema import validate
 from conftest import host_web
 from conftest import host_web
+import pytest
 
 url = host_web+'/api/notification/telegram'
 
-
+@pytest.mark.smoke
 def test_01_status_cod():
     r = requests.get(url=host_web+url)
     assert (r.status_code == 200), 'status is not 200'

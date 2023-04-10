@@ -22,7 +22,7 @@ from conftest import host_web
 from conftest import browser
 
 
-
+@pytest.mark.smoke
 def test_01_main_page(browser):
     browser.find_element(By.LINK_TEXT, 'Каналы').click()
     assert browser.find_element(By.CLASS_NAME, 'button'), 'Элемент button'

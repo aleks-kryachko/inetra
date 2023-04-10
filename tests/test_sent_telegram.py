@@ -15,6 +15,7 @@ import jsonschema
 from jsonschema import Draft7Validator
 from jsonschema import validate
 from conftest import host_web
+import pytest
 
 url = host_web+'/api/notification/telegram'
 

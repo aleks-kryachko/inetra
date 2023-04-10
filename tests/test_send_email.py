@@ -9,7 +9,7 @@ http://195.189.239.54/api/notification/sms
 :maintainer: Aleksandr Kryachko
 :email: aleksan.kryachko@gmail.com
 """
-
+import pytest
 import requests
 import json
 import jsonschema
@@ -19,7 +19,7 @@ from conftest import host_web
 
 url = host_web+'/api/notification/sms'
 
-
+@pytest.mark.smoke
 def test_01_status_cod():
     # url = host_web+'/api/notification/sms'
     r = requests.get(url=url)
