@@ -33,9 +33,9 @@ def test_01_status_code():
 
 def test_02():
     options = webdriver.ChromeOptions()
-    binary_yandex_driver_file = '.yandexdriver.exe'
+    binary_yandex_driver_file = 'yandexdriver.exe'
 
     driver = webdriver.Chrome(binary_yandex_driver_file, options=options)
-    driver.get('http://www.python.org')
-    time.sleep(3)
+    driver.get('http://195.189.239.54/')
+    time.sleep(5)
     driver.quit()

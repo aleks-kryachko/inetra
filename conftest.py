@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-url_ping = 'http://195.189.239.54'
+
 
 host_web ="http://195.189.239.54/"
 
@@ -17,3 +17,12 @@ def browser():
     browser.set_page_load_timeout(10)
     yield browser
     browser.quit()
+
+@pytest.fixture
+def browserY():
+    options = webdriver.ChromeOptions()
+    binary_yandex_driver_file = 'yandexdriver.exe'
+
+    driver = webdriver.Chrome(binary_yandex_driver_file, options=options)
+    driver.get(host_web)
+    driver.quit()
