@@ -25,4 +25,6 @@ def browserY():
 
     driver = webdriver.Chrome(binary_yandex_driver_file, options=options)
     driver.get(host_web)
+    driver.set_page_load_timeout(10)
+    yield driver
     driver.quit()
