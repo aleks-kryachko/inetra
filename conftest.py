@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+import time
 from selenium.webdriver.common.by import By
 
 
@@ -16,6 +17,7 @@ def browser():
     browser.get(url=url)
     browser.set_page_load_timeout(10)
     yield browser
+    time.sleep(3)
     browser.quit()
 
 @pytest.fixture

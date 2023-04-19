@@ -6,7 +6,7 @@ s = requests.Session()
 # http://localhost:8089
 # https://pypi.org/project/locust/
 # https://www.youtube.com/watch?v=_Z62E46bDmY
-from locust import HttpUser, SequentialTaskSet, task, between, constant,user
+from locust import HttpUser, SequentialTaskSet, task, between, constant, user
 
 
 class User(HttpUser):

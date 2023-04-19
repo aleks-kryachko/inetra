@@ -17,3 +17,23 @@ def test_02(browserY):
     print('Yandex_Fail')
     assert browserY.find_element(By.CLASS_NAME, 'header__title'), 'элемент МУП'
 
+    def test_03():
+        assert browserY.find_element(By.CLASS_NAME, 'header__main'), 'Шапка '
+
+    def test_04():
+        assert browserY.find_element(By.LINK_TEXT, 'Журналы'), 'элемент поле Журналы'
+
+    def test_05():
+        assert browserY.find_element(By.LINK_TEXT, 'Каналы'), 'элемент поле Каналы'
+
+    def test_06():
+        assert browserY.find_element(By.LINK_TEXT, 'Получатели'), 'элемент Получатели'
+
+    def test_07():
+        assert browserY.find_element(By.LINK_TEXT, 'Каналы'), 'элемент Каналы'
+
+    def test_08():
+        assert browserY.find_element(By.LINK_TEXT, 'Шаблоны'), 'элемент Шаблоны'
+
+    def test_09():
+        assert browserY.find_element(By.LINK_TEXT, 'Внешние системы'), 'элемент Внешние системы'
