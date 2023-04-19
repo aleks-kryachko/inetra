@@ -20,7 +20,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from conftest import host_web
 from conftest import browser
-@pytest.fixture
+
 def browser():
     browser = webdriver.Chrome(executable_path=".chromedriver.exe")
     # browser = webdriver.Chrome()
@@ -33,11 +33,13 @@ def browser():
     time.sleep(3)
     browser.quit()
 
-m = 5
-i = 1
 
-while i < m:
-    def test_01_recipients_list(browser):
+
+
+def test_01_recipients_list(browser):
+    m = 3
+    i = 1
+    while i < m:
         browser.find_element(By.LINK_TEXT, 'Получатели').click()
     # def test_09_add_recipient():
         browser.find_element(By.CLASS_NAME, 'button').click()
@@ -46,7 +48,7 @@ while i < m:
 
 
 
-    # def test_02():
+        # def test_02():
 #     browser.find_element(By.ID, 'last_name').click();
         browser.find_element(By.ID, 'last_name').send_keys(i)
     # browser.find_element(By.ID, 'first_name').click();
@@ -59,7 +61,7 @@ while i < m:
 
     # browser.find_element(By.LINK_TEXT, 'Сохранить').click()
         browser.find_element(By.LINK_TEXT, 'Получатели').click()
-i += 1
+        i += 1
 
 # def test_04():
     # m = 5
