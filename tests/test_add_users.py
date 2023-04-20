@@ -37,7 +37,7 @@ def browser():
 
 
 def test_01_recipients_list(browser):
-    m = 3
+    m = 2
     i = 1
     while i < m:
         browser.find_element(By.LINK_TEXT, 'Получатели').click()
@@ -60,6 +60,18 @@ def test_01_recipients_list(browser):
         browser.find_element(By.CLASS_NAME, 'button.button-save').click()
 
     # browser.find_element(By.LINK_TEXT, 'Сохранить').click()
+        browser.find_element(By.LINK_TEXT, 'Получатели').click()
+        browser.find_element(By.CLASS_NAME, 'table__add-icon').click()
+        # browser.find_element(By.CLASS_NAME, 'form-control').click()
+        # browser.find_element(By.CLASS_NAME, 'form-control').send_keys("Email")
+        browser.find_element(By.ID, 'contact_info').send_keys("email@mail.ru")
+        browser.find_element(By.CLASS_NAME, 'button.button-save').click()
+        browser.find_element(By.LINK_TEXT, 'Получатели').click()
+        browser.find_element(By.XPATH, '/html/body/main/table/tbody/tr[1]/td[8]/a').click()
+        # browser.find_element(By.CLASS_NAME, 'form-control').click()
+        browser.find_element(By.LINK_TEXT, 'SMS').click()
+        browser.find_element(By.ID, 'contact_info').send_keys("71234567891011")
+        browser.find_element(By.CLASS_NAME, 'button.button-save').click()
         browser.find_element(By.LINK_TEXT, 'Получатели').click()
         i += 1
 
