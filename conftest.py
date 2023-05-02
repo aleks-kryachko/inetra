@@ -16,6 +16,7 @@ def browser():
     url = host_web
     browser.get(url=url)
     browser.set_page_load_timeout(10)
+    # time.sleep(5)
     yield browser
     browser.quit()
 
