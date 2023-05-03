@@ -29,51 +29,69 @@ def test_01_templates_logs_items(browser):
     def test_02(browser):
         assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
 
+    return browser
     def test_03(browser):
         assert browser.find_element(By.CLASS_NAME, 'button'), 'button'
 
+    return browser
     def test_04():
         assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
 
+    return browser
     def test_05():
         assert browser.find_element(By.LINK_TEXT, 'Код'), 'Код'
 
+    return browser
     def test_06():
         assert browser.find_element(By.LINK_TEXT, 'ID'), 'ID'
 
+    return browser
     def test_07():
         assert browser.find_element(By.LINK_TEXT, 'Наименование'), 'поле Наименование'
 
+    return browser
     def test_08():
         assert browser.find_element(By.LINK_TEXT, 'Приём заданий на рассылку'), 'поле Прием задания на рассылку'
+        return browser
 
     def test_09():
         assert browser.find_element(By.LINK_TEXT, 'Приоритет'), 'поле Приоритет'
         browser.find_element(By.CLASS_NAME, 'button').click()
 
+        return browser
     def test_10():
         assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
 
+    return browser
     def test_11():
         assert browser.find_element(By.CLASS_NAME, 'button-back'), 'вернуться'
 
+    return browser
     def test_12():
         assert browser.find_element(By.ID, 'code'), 'Код'
 
+    return browser
     def test_13():
         assert browser.find_element(By.ID, 'name'), 'Наименованние'
 
+    return browser
     def test_14():
         assert browser.find_element(By.ID, 'priority'), 'Приоритет'
 
+    return browser
     def test_15():
         assert browser.find_element(By.ID, 'is_mailing'), 'Разрешен прием заданий'
 
+    return browser
     def test_16():
         assert browser.find_element(By.ID, 'events'), 'Событие'
 
+    return browser
     def test_17():
         assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'Сохранить'
 
+    return browser
     def test_18():
         assert browser.find_element(By.CLASS_NAME, 'form-input-clear'), 'очистить строку'
+        return browser
+

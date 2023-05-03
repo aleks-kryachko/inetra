@@ -25,32 +25,47 @@ def test_01_recipients_list(browser):
     browser.find_element(By.LINK_TEXT, 'Получатели').click()
     def test_02():
         assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
+        return browser
     def test_03():
         assert browser.find_element(By.CLASS_NAME, 'main'), 'таблица'
+        return browser
     def test_04():
         assert browser.find_element(By.CLASS_NAME, 'active'), 'Получатели'
+        return browser
     def test_05():
         assert browser.find_element(By.LINK_TEXT, 'Контакты получателей'), 'Контакты Получателей'
+        return browser
     def test_06():
-        assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
+        assert browser.find_element(By.CLASS_NAME, 'table-filter__title'),'таблица'
+        return browser
     def test_07():
         assert browser.find_element(By.CLASS_NAME, 'buttons-top'), 'кнопка Добавить'
+        return browser
     def test_08():
         assert browser.find_element(By.CLASS_NAME, 'button'), 'кнопка Добавить'
+        return browser
     def test_09_add_recipient():
         browser.find_element(By.CLASS_NAME, 'button').click()
         assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
+        return browser
         def test_10():
             assert browser.find_element(By.CLASS_NAME, 'button-back'), 'Вернуться'
+            return browser
         def test_11():
-            assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
+            assert browser.find_element(By.CLASS_NAME, 'main'),'шапка'
+            return browser
         def test_12():
             assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'Кнопки'
+            return browser
         def test_13():
             assert browser.find_element(By.CLASS_NAME, 'form-input-clear'), 'очистить строку'
+            return browser
         def test_14():
             assert browser.find_element(By.CLASS_NAME, 'recipient_id'), 'ID получателя'
+            return browser
         def test_15():
             assert browser.find_element(By.CLASS_NAME, 'contact_info'), 'контакт получателя'
+            return browser
         def test_16():
             assert browser.find_element(By.CLASS_NAME, 'is_active'), 'признак активности'
+

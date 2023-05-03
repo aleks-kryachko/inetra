@@ -26,8 +26,10 @@ def test_01_recipients_list(browser):
     # авторизацию перенес в фикстуру
     # browser.find_element(By.XPATH, '/html/body/main/form/label[2]').click()
     # browser.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
-    m = 5  # сколько получателей будем создавать
+
+    m = 2  # сколько получателей будем создавать
     i = 1
+
     while i <= m:
     #   Добавляем пользователей
         browser.find_element(By.LINK_TEXT, 'Получатели').click()

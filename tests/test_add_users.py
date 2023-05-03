@@ -35,55 +35,37 @@ def browser():
 
 @pytest.mark.smoke
 def test_01_recipients_list(browser):
-    browser.find_element(By.XPATH, '/html/body/main/form/label[2]').click()
-    browser.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
 
-    def test_01_recipients_list(browser):
-        browser.find_element(By.XPATH, '/html/body/main/form/label[2]').click()
-        browser.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
-        m = 2
-        i = 1
-        while i < m:
-            browser.find_element(By.LINK_TEXT, 'Получатели').click()
-    # def test_09_add_recipient():
-            browser.find_element(By.CLASS_NAME, 'button').click()
+    m = 2  # сколько получателей будем создавать
+    i = 1
 
+    while i <= m:
+        #   Добавляем пользователей
+        browser.find_element(By.LINK_TEXT, 'Получатели').click()
+        browser.find_element(By.CLASS_NAME, 'button').click()
 
-
-
-
-    def test_02(browser):
         browser.find_element(By.ID, 'last_name').click()
-        browser.find_element(By.ID, 'last_name').send_keys("name")
+        browser.find_element(By.ID, 'last_name').send_keys("name", + i)
         # browser.find_element(By.ID, 'first_name').click();
-        browser.find_element(By.ID, 'first_name').send_keys('фамилия')
-    # browser.find_element(By.ID, 'middle_name').click();
+        browser.find_element(By.ID, 'first_name').send_keys('фамилия', + i)
+        # browser.find_element(By.ID, 'middle_name').click();
         browser.find_element(By.ID, 'middle_name').send_keys('отчество')
-
-    # def test_02():
+        i += 1
+        # добавляем контакт Email
         browser.find_element(By.CLASS_NAME, 'button.button-save').click()
-
-    # browser.find_element(By.LINK_TEXT, 'Сохранить').click()
         browser.find_element(By.LINK_TEXT, 'Получатели').click()
         browser.find_element(By.CLASS_NAME, 'table__add-icon').click()
-        browser.find_element(By.CLASS_NAME, 'form-control'=='email@mail.ru').click()
-        # browser.find_element(By.CLASS_NAME, 'form-control').send_keys("Email")
-        # browser.find_element(By.ID, 'is_active').click()
+        # browser.find_element(By.CLASS_NAME, 'form-control' == 'email@mail.ru').click()
+        browser.find_element(By.NAME, 'contact_info').send_keys("email@mail.ru")
+        # добавляем контакт  телефон  выбрав из выпадающего списка
         browser.find_element(By.CLASS_NAME, 'button.button-save').click()
-        # browser.find_element(By.LINK_TEXT, 'Получатели').click()
-        # # browser.find_element(By.XPATH, '/html/body/main/table/tbody/tr[1]/td[8]/a').click()
-        # # browser.find_element(By.CLASS_NAME, 'form-control').click()
-        # # browser.find_element(By.LINK_TEXT, 'SMS').click()
-        # browser.find_element(By.ID, 'contact_info').send_keys("71234567891011")
-        # browser.find_element(By.CLASS_NAME, 'button.button-save').click()
-        # browser.find_element(By.LINK_TEXT, 'Получатели').click()
-    # i += 1
-
-def test_04():
-    m = 5
-    i = 1
-    while i < m:
-        print(i)
+        browser.find_element(By.CLASS_NAME, 'table__add-icon').click()
+        # выпадающий список
+        browser.find_element(By.CLASS_NAME, 'form-control').click()
+        browser.find_element(By.ID, 'channel_id').send_keys("SMS")
+        # browser.find_element(By.LINK_TEXT, 'SMS').click()
+        browser.find_element(By.ID, 'contact_info').send_keys("+79139131122")
+        browser.find_element(By.XPATH, '/html/body/main/div[2]/form/div[3]/button').click()
+    # browser.find_element(By.LINK_TEXT, 'Сохранить').click()
+    #     assert browser.find_element(By.LINK_TEXT, '2'), 'нет второго контакта'
     i += 1
-
-
