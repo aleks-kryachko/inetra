@@ -15,8 +15,11 @@ def browser():
     # browser.maximize_window()
     url = host_web
     browser.get(url=url)
+    browser.find_element(By.XPATH, '/html/body/main/form/label[2]').click()
+    browser.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
     browser.set_page_load_timeout(10)
     # time.sleep(5)
+
     yield browser
     browser.quit()
 
@@ -27,6 +30,9 @@ def browserY():
 
     driver = webdriver.Chrome(binary_yandex_driver_file, options=options)
     driver.get(host_web)
+    # авторизация классов тегов и ид нет, поэтому кликает по кривому , так делать нельзя
+    browser.find_element(By.XPATH, '/html/body/main/form/label[2]').click()
+    browser.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
     driver.set_page_load_timeout(10)
     yield driver
     driver.quit()

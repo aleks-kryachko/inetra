@@ -23,9 +23,9 @@ from conftest import browser
 
 
 def test_01_recipients_list(browser):
-
-    browser.find_element(By.XPATH, '/html/body/main/form/label[2]').click()
-    browser.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
+    # авторизацию перенес в фикстуру
+    # browser.find_element(By.XPATH, '/html/body/main/form/label[2]').click()
+    # browser.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
     m = 5  # сколько получателей будем создавать
     i = 1
     while i <= m:

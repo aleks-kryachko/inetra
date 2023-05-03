@@ -10,6 +10,7 @@ http://195.189.239.54/templates
 :maintainer: Aleksandr Kryachko
 :email: aleksan.kryachko@gmail.com
 """
+
 import requests
 import pytest
 import time
@@ -70,7 +71,7 @@ def test_01_templates_logs_items(browser):
 
     def test_15():
         assert browser.find_element(By.LINK_TEXT, 'Файл'), 'поле Файл'
-    assert browser.find_element(By.LINK_TEXT, 'Дата создания'), 'поле Дата создания'
+        assert browser.find_element(By.LINK_TEXT, 'Дата создания'), 'поле Дата создания'
 
     def test_16():
         browser.find_element(By.LINK_TEXT, 'Шаблоны').click()
