@@ -24,80 +24,82 @@ from conftest import browser
 
 
 @pytest.mark.smoke
-def test_01_templates_logs_items(browser):
+def test_01_logs_items(browser):
     browser.find_element(By.LINK_TEXT, 'Шаблоны').click()
-
-    def test_02():
+    return browser
+    def test_02(self):
         assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
-
-    def test_03():
+        return browser
+    def test_03(self):
         assert browser.find_element(By.CLASS_NAME, 'main'), 'таблица'
-
-    def test_04():
+        return browser
+    def test_04(self):
         assert browser.find_element(By.CLASS_NAME, 'active'), 'Шапка'
-
-    def test_04():
+        return browser
+    def test_04(self):
         assert browser.find_element(By.CLASS_NAME, 'active'), 'Шапка'
-
-    def test_05():
+        return browser
+    def test_05(self):
         assert browser.find_element(By.CLASS_NAME, 'button'), 'button'
-
-    def test_06():
+        return browser
+    def test_06(self):
         assert browser.find_element(By.CLASS_NAME, 'table-filter__title'), 'Фильтр'
-
-    def test_07():
+        return browser
+    def test_07(self):
         assert browser.find_element(By.LINK_TEXT, 'Код'), 'Код'
-
-    def test_08():
+        return browser
+    def test_08(self):
         assert browser.find_element(By.LINK_TEXT, 'ID'), 'ID'
-
-    def test_09():
+        return browser
+    def test_09(self):
         assert browser.find_element(By.LINK_TEXT, 'Наименование'), 'поле Наименование'
-
-    def test_10():
+        return browser
+    def test_10(self):
         assert browser.find_element(By.LINK_TEXT, 'Версия'), 'поле Версия'
-
-    def test_11():
+        return browser
+    def test_11(self):
         assert browser.find_element(By.LINK_TEXT, 'Код'), 'поле Код'
-
-    def test_12():
+        return browser
+    def test_12(self):
         assert browser.find_element(By.LINK_TEXT, 'Тип канала'), 'поле тип канала'
-
-    def test_13():
+        return browser
+    def test_13(self):
         assert browser.find_element(By.LINK_TEXT, 'Тема оповещения'), 'поле Заголовок'
-
-    def test_14():
+        return browser
+    def test_14(self):
         assert browser.find_element(By.LINK_TEXT, 'Структура уведомления'), 'поле Структура уведомления'
-
-    def test_15():
+        return browser
+    def test_15(self):
         assert browser.find_element(By.LINK_TEXT, 'Файл'), 'поле Файл'
         assert browser.find_element(By.LINK_TEXT, 'Дата создания'), 'поле Дата создания'
-
-    def test_16():
+        return browser
+    def test_16(self):
         browser.find_element(By.LINK_TEXT, 'Шаблоны').click()
         browser.find_element(By.CLASS_NAME, 'button').click()
         assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
-
-    def test_17():
+        return browser
+    def test_17(self):
         assert browser.find_element(By.CLASS_NAME, 'button-back'), 'кнопка Вернуться'
+        return browser
 
-    def test_18():
+    def test_18(self):
         assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'кнопки'
-
-    def test_19():
+        return browser
+    def test_19(self):
         assert browser.find_element(By.ID, 'code'), 'Код'
-
-    def test_20():
+        return browser
+    def test_20(self):
         assert browser.find_element(By.ID, 'name'), 'Наименование'
-
-    def test_21():
+        return browser
+    def test_21(self):
         assert browser.find_element(By.ID, 'version'), 'Версия'
-
-    def test_22():
+        return browser
+    def test_22(self):
         assert browser.find_element(By.ID, 'channel_type'), 'Тип канала'
-
-    def test_23():
+        return browser
+    def test_23(self):
         assert browser.find_element(By.ID, 'title'), 'Тема оповещения'
-
-    def test_24():
+        return browser
+    def test_24(self):
         assert browser.find_element(By.CLASS_NAME, 'form-group'), 'Структура уведомления'
+        return browser

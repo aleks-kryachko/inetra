@@ -24,11 +24,12 @@ from conftest import browser
 @pytest.mark.smoke
 def test_01_templates_logs_items(browser):
     browser.find_element(By.LINK_TEXT, 'Внешние системы').click()
+    return browser
 
-    def test_02():
+    def test_02(browser):
         assert browser.find_element(By.CLASS_NAME, 'header__main'), 'Шапка'
 
-    def test_03():
+    def test_03(browser):
         assert browser.find_element(By.CLASS_NAME, 'button'), 'button'
 
     def test_04():

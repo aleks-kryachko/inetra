@@ -58,4 +58,3 @@ def test_01_recipients_list(browser):
     # browser.find_element(By.LINK_TEXT, 'Сохранить').click()
     #     assert browser.find_element(By.LINK_TEXT, '2'), 'нет второго контакта'
     i += 1
-

@@ -26,12 +26,16 @@ from conftest import browser
 def test_01_main_page(browser):
     browser.find_element(By.LINK_TEXT, 'Каналы').click()
     assert browser.find_element(By.CLASS_NAME, 'button'), 'Элемент button'
+    return browser
 
     def test_02():
         assert browser.find_element(By.CLASS_NAME, 'main'), 'Таблица'
+        return browser
     # assert browser.find_element(By.CLASS_NAME, 'column desc'), 'Элемент ID'
+
     def test_03():
         assert browser.find_element(By.CLASS_NAME, 'table-filter'), 'Фильтр'
+        return browser
     # assert browser.find_element(By.LINK_TEXT, 'Тип канала'), 'Элемент Тип канала'
     # assert browser.find_element(By.LINK_TEXT, 'Отправитель'), 'Элемент Отправитель'
     # assert browser.find_element(By.LINK_TEXT, 'По умолчанию'), 'Элемент По умолчанию'
@@ -41,22 +45,29 @@ def test_01_main_page(browser):
     def test_04():
         browser.find_element(By.CLASS_NAME, 'button').click()
         assert browser.find_element(By.CLASS_NAME, 'button-back'), 'Элемент Вернуться'
+        return browser
 
     def test_05():
         assert browser.find_element(By.CLASS_NAME, 'main'), 'Элемент Таблица'
+        return browser
 
     def test_06():
         assert browser.find_element(By.ID, 'channel_type'), 'Элемент Наименование'
+        return browser
 
     def test_07():
         assert browser.find_element(By.ID, 'send_count'), 'Элемент Количество попыток'
+        return browser
 
     def test_08():
         assert browser.find_element(By.ID, 'is_default'), 'По умолчанию'
+        return browser
 
     def test_09():
         assert browser.find_element(By.CLASS_NAME, 'form-input-clear'), 'Элемент Очистить строку'
+        return browser
 
     def test_10():
         assert browser.find_element(By.CLASS_NAME, 'buttons-bottom'), 'Элемент Кнопки'
+        return browser
 
