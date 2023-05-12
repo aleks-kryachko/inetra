@@ -26,13 +26,13 @@ def browser():
 @pytest.fixture
 def browserY():
     options = webdriver.ChromeOptions()
-    binary_yandex_driver_file = 'yandexdriver.exe'
+    binary_yandex_driver_file = '.yandexdriver.exe'
 
     driver = webdriver.Chrome(binary_yandex_driver_file, options=options)
     driver.get(host_web)
     # авторизация классов тегов и ид нет, поэтому кликает по кривому , так делать нельзя
-    browser.find_element(By.XPATH, '/html/body/main/form/label[2]').click()
-    browser.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
+    driver.find_element(By.CSS_SELECTOR, 'body > main > form > label:nth-child(3) > input[type=radio]').click()
+    driver.find_element(By.CSS_SELECTOR, 'body > main > form > button').click()
     driver.set_page_load_timeout(10)
     yield driver
-    # driver.quit()
+    driver.quit()
