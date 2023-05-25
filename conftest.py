@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 
 
-host_web ="http://195.189.239.54/"
+host_web ="http://195.189.239.**/"
 
 @pytest.fixture
 def browser():
